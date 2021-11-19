@@ -1,38 +1,89 @@
+:root {
+  --bg-color: #1e1a1d;
+  --h1-color: #fdfffc;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Code Pro', monospace;
+  min-height: 2500px;
+  background: var(--bg-color);
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  display: grid;
+  position: relative;
   min-height: 100vh;
+  scroll-behavior: none;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-tip {
+  position: absolute;
+  place-self: center;
+  color: white;
+}
+.App-header {
+  position: fixed;
+  width: 100vw;
+  min-height: 4em;
+  min-width: 3em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#logo {
+  padding: 1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.landscape-container {
+  position: fixed;
+  min-height: 100vh;
+}
+
+.star-type-1 {
+  fill: grey;
+  animation: blink1 2s infinite;
+}
+
+@keyframes blink1 {
+  50% {
+    fill: white;
   }
   to {
-    transform: rotate(360deg);
+    fill: grey;
+  }
+}
+
+.star-type-2 {
+  fill: grey;
+  animation: blink2 3s infinite;
+}
+
+@keyframes blink2 {
+  50% {
+    fill: white;
+  }
+  to {
+    fill: grey;
+  }
+}
+
+.star-type-3 {
+  fill: grey;
+  animation: blink3 4s infinite;
+}
+
+@keyframes blink3 {
+  50% {
+    fill: white;
+  }
+  to {
+    fill: grey;
   }
 }
