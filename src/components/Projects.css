@@ -1,0 +1,10 @@
+.projects-container {
+  padding-top: 5em;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--card-color);
+  box-shadow: 0px 0px 15px var(--shadow);
+}

@@ -1,0 +1,31 @@
+.home-container {
+  min-height: 100vh;
+  padding: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--font-color);
+  background-color: var(--bg-color);
+  transition: all 1s ease;
+}
+.name-description {
+  height: 100;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-description h1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+.name-description h1 p {
+  margin-left: 0.4em;
+}
+.name-description h2 {
+  text-align: center;
+}

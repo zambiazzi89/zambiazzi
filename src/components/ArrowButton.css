@@ -1,0 +1,33 @@
+.arrow-box {
+  width: 2em;
+  height: 4em;
+}
+.arrow-box span {
+  display: block;
+  width: 1em;
+  height: 1em;
+  border-bottom: 2px solid var(--accent-color);
+  border-right: 2px solid var(--accent-color);
+  transform: rotate(45deg) translate(0em, -1.5em);
+  animation: animate-arrow 2.5s infinite;
+  margin: -0.6em;
+}
+.arrow-box span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow-box span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate-arrow {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(0em, -1.5em);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(2em, 0.5em);
+  }
+}

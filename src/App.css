@@ -1,89 +1,59 @@
-:root {
-  --bg-color: #1e1a1d;
-  --h1-color: #fdfffc;
+.light {
+  --bg-color: white;
+  --bg-color-80: rgba(255, 255, 255, 0.8);
+  --font-color: black;
+  --button-font-color: white;
+  --accent-color: hsl(180, 100%, 25%);
+  --accent-color-light: hsl(180, 100%, 30%);
+  --accent-color-lighter: hsl(180, 100%, 90%);
+  --theme-gray: darkgray;
+  --card-color: rgb(250, 250, 250);
+  --shadow: grey;
+}
+.dark {
+  --bg-color: hsl(315, 5%, 10%);
+  --bg-color-80: rgba(30, 26, 29, 0.8);
+  --font-color: lightgrey;
+  --button-font-color: black;
+  --accent-color: hsl(17, 100%, 74%);
+  --accent-color-light: hsl(17, 100%, 80%);
+  --accent-color-lighter: hsl(17, 100%, 90%);
+  --theme-gray: lightgray;
+  --card-color: hsl(315, 5%, 20%);
+  --shadow: black;
 }
 
-body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
   margin: 0;
-  font-family: 'Source Code Pro', monospace;
-  min-height: 2500px;
-  background: var(--bg-color);
+  padding: 0;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.App,
+.App-header,
+.projects-container,
+.contact-container,
+.confirmation-container {
+  transition: all 1s ease;
 }
 .App {
-  display: grid;
-  position: relative;
-  min-height: 100vh;
-  scroll-behavior: none;
-  scrollbar-width: none;
-}
-body::-webkit-scrollbar {
-  display: none;
-}
-
-.scroll-tip {
-  position: absolute;
-  place-self: center;
-  color: white;
-}
-.App-header {
-  position: fixed;
-  width: 100vw;
-  min-height: 4em;
-  min-width: 3em;
+  background-color: var(--bg-color);
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  overflow-x: hidden;
 }
-#logo {
-  padding: 1em;
-}
-
-.landscape-container {
-  position: fixed;
-  min-height: 100vh;
-}
-
-.star-type-1 {
-  fill: grey;
-  animation: blink1 2s infinite;
-}
-
-@keyframes blink1 {
-  50% {
-    fill: white;
-  }
-  to {
-    fill: grey;
-  }
-}
-
-.star-type-2 {
-  fill: grey;
-  animation: blink2 3s infinite;
-}
-
-@keyframes blink2 {
-  50% {
-    fill: white;
-  }
-  to {
-    fill: grey;
-  }
-}
-
-.star-type-3 {
-  fill: grey;
-  animation: blink3 4s infinite;
-}
-
-@keyframes blink3 {
-  50% {
-    fill: white;
-  }
-  to {
-    fill: grey;
-  }
+.accent-color {
+  color: var(--accent-color);
 }
