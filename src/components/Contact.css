@@ -1,17 +1,18 @@
 .contact-background {
   min-height: 100vh;
   padding-top: 5em;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-container {
   background-color: var(--card-color);
   box-shadow: 3px 3px 5px var(--shadow);
   border-radius: 5px;
-  width: 30em;
+  width: clamp(300px, 90vw, 30em);
   height: 30em;
-  padding: 5em;
+  padding: 4em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
