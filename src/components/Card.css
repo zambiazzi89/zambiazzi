@@ -9,6 +9,23 @@
 }
 
 .project-image {
+  position: relative;
+}
+.img-hover-message {
+  opacity: 0;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.img-hover-message:hover {
+  opacity: 0.8;
+}
+
+.project-image img {
   width: 100%;
 }
 
@@ -56,11 +73,13 @@
   background-color: var(--bg-color-80);
   display: grid;
   place-items: center;
+  z-index: 2;
 }
 .gif-card-container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  min-width: 300px;
   max-width: 80vw;
 }
 .gif-card-container button {

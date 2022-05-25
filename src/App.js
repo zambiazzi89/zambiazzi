@@ -7,7 +7,7 @@ import { Home } from './components/Home'
 import { Projects } from './components/Projects'
 
 const App = () => {
-  const [darkTheme, setDarkTheme] = useState(false)
+  const [darkTheme, setDarkTheme] = useState(true)
   const [activeButton, setActiveButton] = useState('')
   const projectsRef = useRef()
   const contactRef = useRef()

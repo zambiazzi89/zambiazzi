@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaGithub } from 'react-icons/fa'
 import './Card.css'
+import { ImageLoader } from './ImageLoader'
 
 export const Card = ({
   image,
@@ -12,20 +13,15 @@ export const Card = ({
   githubURL,
 }) => {
   const [showGifCard, setShowGifCard] = useState(false)
-  const [showSmallGif, setShowSmalGif] = useState(false)
 
   return (
     <div className="project-card">
       <div
-        onMouseEnter={() => setShowSmalGif(true)}
-        onMouseLeave={() => setShowSmalGif(false)}
+        className="project-image"
         onClick={() => setShowGifCard(!showGifCard)}
       >
-        {showSmallGif ? (
-          <img className="project-image" src={imageSmallGIF} alt="Project" />
-        ) : (
-          <img className="project-image static" src={image} alt="Project" />
-        )}
+        <div className="img-hover-message">Click to see demo!</div>
+        <ImageLoader imgSrc={image} />
       </div>
       <div className="project-description">
         <h4 className="card-title">{title}</h4>
@@ -41,7 +37,7 @@ export const Card = ({
         <div className="gif-card-background">
           <div className="gif-card-container">
             <button onClick={() => setShowGifCard(false)}>x</button>
-            <img src={imageGIF} alt="Project" />
+            <ImageLoader className="project-gif" imgSrc={imageGIF} />
           </div>
         </div>
       )}
