@@ -13,14 +13,19 @@ export const Card = ({
   githubURL,
 }) => {
   const [showGifCard, setShowGifCard] = useState(false)
-
   return (
     <div className="project-card">
       <div
         className="project-image"
         onClick={() => setShowGifCard(!showGifCard)}
       >
-        <div className="img-hover-message">Click to see demo!</div>
+        {/* <div
+          className={`img-hover-message ${
+            hoverMessage ? 'active' : 'inactive'
+          }`}
+        >
+          Click to see demo!
+        </div> */}
         <ImageLoader imgSrc={image} />
       </div>
       <div className="project-description">
@@ -37,7 +42,9 @@ export const Card = ({
         <div className="gif-card-background">
           <div className="gif-card-container">
             <button onClick={() => setShowGifCard(false)}>x</button>
-            <ImageLoader className="project-gif" imgSrc={imageGIF} />
+            <div className="project-gif">
+              <ImageLoader imgSrc={imageGIF} />
+            </div>
           </div>
         </div>
       )}

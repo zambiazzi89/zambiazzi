@@ -10,9 +10,11 @@
 
 .project-image {
   position: relative;
+  aspect-ratio: 1280 / 801;
+  display: grid;
+  place-items: center;
 }
 .img-hover-message {
-  opacity: 0;
   position: absolute;
   display: grid;
   place-items: center;
@@ -20,13 +22,34 @@
   height: 100%;
   background-color: black;
 }
+.img-hover-message.inactive {
+  opacity: 0;
+}
 
-.img-hover-message:hover {
+.img-hover-message:hover,
+.img-hover-message.active {
   opacity: 0.8;
 }
 
 .project-image img {
   width: 100%;
+}
+
+.project-image::after {
+  display: none;
+}
+
+.project-image:hover::after,
+.project-image:active::after {
+  display: grid;
+  place-items: center;
+  content: 'Click to see demo!';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: black;
+  opacity: 0.8;
 }
 
 .project-image:hover {
@@ -78,11 +101,14 @@
 .gif-card-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  min-width: 300px;
-  max-width: 80vw;
+  width: 1280px;
+  aspect-ratio: 1280/801;
+  max-width: 90vw;
+  max-height: 60vh;
 }
+
 .gif-card-container button {
+  align-self: flex-end;
   border: none;
   padding: 0.2em 0.4em;
   margin-bottom: 0.4em;
@@ -93,9 +119,16 @@
   cursor: pointer;
   background-color: var(--accent-color-light);
 }
+
 .gif-card-container img {
-  max-width: 80vw;
-  max-height: 60vh;
+  width: 100%;
+}
+
+.project-gif {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
 }
 
 .gif-card-background,
