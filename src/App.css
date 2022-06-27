@@ -1,13 +1,14 @@
 .light {
-  --bg-color: white;
+  --bg-color: hsl(20, 10%, 90%);
   --bg-color-80: rgba(255, 255, 255, 0.8);
   --font-color: black;
   --button-font-color: white;
-  --accent-color: hsl(180, 100%, 25%);
-  --accent-color-light: hsl(180, 100%, 30%);
-  --accent-color-lighter: hsl(180, 100%, 90%);
+  --accent-color: hsl(180, 80%, 20%);
+  --accent-color-light: hsl(180, 80%, 26%);
+  --accent-color-lighter: hsl(180, 50%, 32%);
   --theme-gray: darkgray;
   --card-color: rgb(250, 250, 250);
+  --card-color: hsl(20, 10%, 84%);
   --shadow: grey;
 }
 .dark {
@@ -15,9 +16,9 @@
   --bg-color-80: rgba(30, 26, 29, 0.8);
   --font-color: lightgrey;
   --button-font-color: black;
-  --accent-color: hsl(17, 100%, 74%);
-  --accent-color-light: hsl(17, 100%, 80%);
-  --accent-color-lighter: hsl(17, 100%, 90%);
+  --accent-color: hsl(17, 80%, 74%);
+  --accent-color-light: hsl(17, 80%, 80%);
+  --accent-color-lighter: hsl(17, 50%, 86%);
   --theme-gray: lightgray;
   --card-color: hsl(315, 5%, 20%);
   --shadow: black;
@@ -52,7 +53,6 @@ html {
   background-color: var(--bg-color);
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }
 .accent-color {
   color: var(--accent-color);

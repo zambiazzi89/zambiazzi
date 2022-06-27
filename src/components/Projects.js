@@ -46,31 +46,38 @@ const ProjectIcons = {
 export const Projects = ({ projectsRef }) => {
   return (
     <div ref={projectsRef} className="projects-container" id="projects">
-      <Card
-        image={rhinoStaticImg}
-        imageSmallGIF={rhinoSmallGIF}
-        imageGIF={rhinoLargeGIF}
-        title="Sales Fulfillment Tool"
-        description="Tool created to reduce human-error and increase efficiency for the order management position at Rhino Foods."
-        tools={[
-          ProjectIcons.HTML5,
-          ProjectIcons.CSS3,
-          ProjectIcons.JAVASCRIPT,
-          ProjectIcons.REACT,
-          ProjectIcons.NODEJS,
-          ProjectIcons.MONGODB,
-        ]}
-        githubURL="https://github.com/zambiazzi89/sales-fulfillment-tool"
-      />
-      <Card
-        image={rawsterStaticImg}
-        imageSmallGIF={rawsterSmallGIF}
-        imageGIF={rawsterGIF}
-        title="Rawster"
-        description="Android application that keeps track of inventory performing CRUD (Create, Read, Update, Delete) operations."
-        tools={[ProjectIcons.ANDROID, ProjectIcons.JAVA, ProjectIcons.SQLITE]}
-        githubURL="https://github.com/zambiazzi89/cs-360-project"
-      />
+      <div className="projects-header">
+        <p>
+          Here are some of the <span>apps</span> I have built
+        </p>
+      </div>
+      <div className="card-container">
+        <Card
+          image={rhinoStaticImg}
+          imageSmallGIF={rhinoSmallGIF}
+          imageGIF={rhinoLargeGIF}
+          title="Sales Fulfillment Tool"
+          description="Tool created to reduce human-error and increase efficiency for the order management position at Rhino Foods."
+          tools={[
+            ProjectIcons.HTML5,
+            ProjectIcons.CSS3,
+            ProjectIcons.JAVASCRIPT,
+            ProjectIcons.REACT,
+            ProjectIcons.NODEJS,
+            ProjectIcons.MONGODB,
+          ]}
+          githubURL="https://github.com/zambiazzi89/sales-fulfillment-tool"
+        />
+        <Card
+          image={rawsterStaticImg}
+          imageSmallGIF={rawsterSmallGIF}
+          imageGIF={rawsterGIF}
+          title="Rawster"
+          description="Android application that keeps track of inventory performing CRUD (Create, Read, Update, Delete) operations."
+          tools={[ProjectIcons.ANDROID, ProjectIcons.JAVA, ProjectIcons.SQLITE]}
+          githubURL="https://github.com/zambiazzi89/cs-360-project"
+        />
+      </div>
     </div>
   )
 }

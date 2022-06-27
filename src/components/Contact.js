@@ -25,8 +25,11 @@ export const Contact = ({ contactRef }) => {
     setShowConfirmation(false)
   }
   return (
-    <div ref={contactRef} id="contact" className="contact-background">
-      <form className="contact-container" onSubmit={sendEmail}>
+    <div ref={contactRef} id="contact" className="contact-container">
+      <p>
+        Send me a <span>message</span>!
+      </p>
+      <form className="form-container" onSubmit={sendEmail}>
         <input type="text" name="name" placeholder="Name" required />
         <input type="email" name="email" placeholder="Email" required />
         <input type="url" name="website" placeholder="Website" />

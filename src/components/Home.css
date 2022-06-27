@@ -9,6 +9,7 @@
   transition: all 1s ease;
 }
 .name-description {
+  font-size: 1.2em;
   height: 100;
   flex: 1;
   display: flex;
@@ -17,15 +18,46 @@
   align-items: center;
 }
 
-.name-description h1 {
+.name-description > h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+  opacity: 0;
+  animation: fade-in 2s forwards;
 }
-.name-description h1 p {
-  margin-left: 0.4em;
+
+h1 > span {
+  color: var(--accent-color);
+  margin-left: 0.2em;
+  margin-right: 0.08em;
 }
-.name-description h2 {
-  text-align: center;
+
+.subheader-1 {
+  font-size: 1.5em;
+  padding-top: 1em;
+  opacity: 0;
+  animation: fade-in 2s 1s forwards;
+}
+.subheader-1 > span {
+  color: var(--accent-color-light);
+}
+
+.subheader-2 {
+  font-size: 1.2em;
+  padding-top: 1em;
+  opacity: 0;
+  animation: fade-in 2s 2s forwards;
+}
+.subheader-2 span {
+  color: var(--accent-color-lighter);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
