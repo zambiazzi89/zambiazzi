@@ -10,11 +10,11 @@ export const Home = () => {
           Hey there, I'm <span>Diego</span>!
         </h1>
         <p className="subheader-1">
-          <span>Software Engineering</span> new graduate
+          <span>Software Engineering</span> new graduate based in{' '}
+          <span>NYC</span>
         </p>
         <p className="subheader-2">
-          Based in <span>NYC</span> | Cloud and Custom Apps Consultant for{' '}
-          <span>Capgemini</span>
+          Cloud and Custom Apps Consultant for <span>Capgemini</span>
         </p>
       </div>
       <a href="#projects">

@@ -9,7 +9,6 @@
   transition: all 1s ease;
 }
 .name-description {
-  font-size: 1.2em;
   height: 100;
   flex: 1;
   display: flex;
@@ -19,6 +18,7 @@
 }
 
 .name-description > h1 {
+  font-size: clamp(1em, 1.2em);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -34,7 +34,8 @@ h1 > span {
 }
 
 .subheader-1 {
-  font-size: 1.5em;
+  text-align: center;
+  font-size: clamp(1.3em, 1.4em, 1.5em);
   padding-top: 1em;
   opacity: 0;
   animation: fade-in 2s 1s forwards;
@@ -44,7 +45,8 @@ h1 > span {
 }
 
 .subheader-2 {
-  font-size: 1.2em;
+  text-align: center;
+  font-size: clamp(1.1em, 1.2em, 1.3em);
   padding-top: 1em;
   opacity: 0;
   animation: fade-in 2s 2s forwards;
